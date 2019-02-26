@@ -1,1 +1,42 @@
-hi
+1. Java Access Modifiers – public, protected, private and default(package-private):
+	used to provide access control in java. 
+	can be used with Classes ,Class variables and methods.
+	JAVA Access Modifires with Classes:
+	--> If a class is “public” then we can access it from anywhere, i.e from any other class located in any other packages etc.
+	--> We can have only one “public” class in a source file and file name should be same as the public class name.
+	--> If the class has “default access” then it can be accessed only from other classes in the same package.
+	Java Access Modifiers with Class Member:
+	--> We can have all the four access modifiers for class member variables and methods. However member access modifier rules get applied 
+	after the class level access rules. For example, if class is having default access then it will not be visible in other packages and 
+	hence methods and variables of the class will also be not visible.
+	Java Access Modifiers – public keyword:
+	--> If class member is “public” then it can be accessed from anywhere. The member variable or method is accessed globally.
+	Java Access Modifiers – private keyword:
+	--> If class member is “private” then it will be accessible only inside the same class. 
+	This is the most restricted access and the class member will not be visible to the outer world.
+	Java Access Modifiers – protected keyword:
+	--> If class member is “protected” then it will be accessible only to the classes in the same package and to the subclasses. 
+	This modifier is less restricted from private but more restricted from public access. 
+	Java Access Modifiers – default access:
+	--> If class member doesn’t have any access modifier specified, then it’s treated with default access. 
+	The access rules are similar as classes and the class member with default access will be accessible to the classes in the same package only. 
+			(Least Accessible) private < default < protected < public (Most Accessible)
+     
+ 2. Java static keyword:
+	--> Java static keyword is used to create a Class level variable in java. 
+	static variables and methods are part of the class, not the instances of the class
+		--> Static Varibales: We can use static keyword with a class level variable. A static variable is a class variable and 
+			doesn’t belong to Object/instance of the class. Since static variables are shared across all the instances of Object, they are not thread safe.
+			Usually, static variables are used with the final keyword for common resources or constants that can be used by all the objects. 
+			If the static variable is not private, we can access it with ClassName.variableName
+		--> Static Methods : Same as static variable, static method belong to class and not to class instances. A static method can access 
+			only static variables of class Usually, static methods are utility methods that we want to expose to be used by 
+			other classes without the need of creating an instance.and invoke only static methods of the class.
+		--> Static Block : Java static block is the group of statements that gets executed when the class is loaded into memory by Java ClassLoader.
+			Static block is used to initialize the static variables of the class. Mostly it’s used to create static resources when the class is loaded.
+			We can’t access non-static variables in the static block. We can have multiple static blocks in a class, although it doesn’t make much sense. 
+			Static block code is executed only once when the class is loaded into memory.
+		--> Static inner class : We can use static keyword with nested classes. static keyword can’t be used with top-level classes.
+			A static nested class is same as any other top-level class and is nested for only packaging convenience.
+		--> Interface  Static method.(JAVA 8 )
+		--> Static import : Normally we access static members using Class reference, from Java 1.5 we can use java static import to avoid class reference.
