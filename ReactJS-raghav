@@ -24,3 +24,11 @@ constructor(props) {
         </label>
         <input type="submit" value="Submit" />
       </form>
+
+
+npm install react-datepicker --save
+
+<DatePicker
+    selected={this.state.startDate}
+    onChange={this.handleChange}
+/>
