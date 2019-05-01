@@ -32,3 +32,5 @@ npm install react-datepicker --save
     selected={this.state.startDate}
     onChange={this.handleChange}
 />
+
+import DatePicker from 'react-datepicker';
